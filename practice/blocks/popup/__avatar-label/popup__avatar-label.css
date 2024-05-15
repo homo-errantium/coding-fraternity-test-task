@@ -1,0 +1,45 @@
+.popup__avatar-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffff;
+    background-image: url(../../../images/avatar-default.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.popup__avatar-label:hover {
+    cursor: pointer;
+}
+
+.popup__avatar-label:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../../../images/upload.svg);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 29.17px;
+    content: '';
+}
+
+.popup__avatar-label:hover::after {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    color: #ffff;
+    text-decoration: underline;
+    content: 'Выберите файл';
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18.67px;
+    line-height: 28px;
+    position: absolute;
+    top: 25px;
+}

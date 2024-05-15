@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <script defer src="./scripts/validate.js"></script>
+  <script defer src="./scripts/index.js"></script>
+  <script defer src="./scripts/selectors.js"></script>
+  <title>practice test task</title>
+</head>
+
+<body class='root'>
+  <div class="page">
+    <header></header>
+    <main><button class='main__button' type='button'>Открыть попап</button></main>
+    <footer></footer>
+
+    <!-- /*попап */ -->
+    <div class="popup popup_type_add">
+      <div class="popup__container">
+        <h2 class="popup__title">Стать партнёром проекта</h2>
+        <form novalidate enctype="text/plain" class="popup__form" id="popupAddForm">
+          <fieldset class="popup__set">
+
+            <!-- аватар -->
+            <div class="popup__wrapper">
+              <div class="popup__avatar-container">
+                <button type="button" class="popup__avatar-close-button"></button>
+                <label class="popup__avatar-label" for="orgAvatar-input">
+                  <input class='popup__input popup__input_type_orgAvatar popup__avatar-input' type="file"
+                    id='orgAvatar-input' accept=".png,.jpg,.jpeg,">
+                </label>
+              </div>
+
+              <div class="popup_wrapper popup__wrapper_in">
+                <!-- название организации -->
+                <input id="orgName-input" required placeholder="" type="text"
+                  class="popup__input popup__input_type_orgName" minlength="2" maxlength="40" />
+                <label for="orgName-input">Название организации</label>
+                <div class="popup__input-error">
+                  <span class="popup__input-error-text orgName-input-error"></span>
+                </div>
+
+                <!-- телефон организации  -->
+                <input id="orgTel-input" required placeholder="" type="tel"
+                  class="popup__input popup__input_type_orgTel" minlength="11" maxlength="12" />
+                <label for="orgTel-input">Телефон</label>
+                <div class="popup__input-error">
+                  <span class="popup__input-error-text orgTel-input-error"></span>
+                </div>
+
+                <!-- почта организации  -->
+                <input id="orgEmail-input" required placeholder="" type="email"
+                  class="popup__input popup__input_type_orgEmail" />
+                <label for="orgEmail-input">E-mail</label>
+                <div class="popup__input-error">
+                  <span class="popup__input-error-text orgEmail-input-error"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- направление организации  -->
+            <label for="orgDirection-input"></label>
+            <input id="orgDirection-input" required placeholder="Направление" type="radio"
+              class="popup__input popup__input_type_orgDirection" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgDirection-input-error"></span>
+            </div>
+
+            <!-- сайт организации  -->
+            <label for="orgSite-input"></label>
+            <input id="orgSite-input" placeholder="Сайт организации" type="text"
+              class="popup__input popup__input_type_orgSite" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgSite-input-error"></span>
+            </div>
+
+            <!-- страница организации в вк  -->
+            <label for="orgVKPage-input"></label>
+            <input id="orgVKPage-input" placeholder="Страница организации в VK" type="text"
+              class="popup__input popup__input_type_orgVKPage" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgVKPage-input-error"></span>
+            </div>
+
+            <!-- страница организации в одноклассниках  -->
+            <label for="orgOKPage-input"></label>
+            <input id="orgOKPage-input" placeholder="Страница организации в OK" type="text"
+              class="popup__input popup__input_type_orgOKPage" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgOKPage-input-error"></span>
+            </div>
+
+            <!-- страница организации в фейсбук  -->
+            <label for="orgFBPage-input"></label>
+            <input id="orgFBPage-input" placeholder="Страница организации в Facebook" type="text"
+              class="popup__input popup__input_type_orgFBPage" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgFBPage-input-error"></span>
+            </div>
+
+            <!-- страница организации в инстаграм  -->
+            <label for="orgInstPage-input"></label>
+            <input id="orgInstPage-input" placeholder="Страница организации в Instagram" type="text"
+              class="popup__input popup__input_type_orgInstPage" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgInstPage-input-error"></span>
+            </div>
+
+            <!-- страница организации в youtube  -->
+            <label for="orgYoutubePage-input"></label>
+            <input id="orgYoutubePage-input" placeholder="Страница организации в Youtube" type="text"
+              class="popup__input popup__input_type_orgYoutubePage" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text orgYoutubePage-input-error"></span>
+            </div>
+
+            <!-- Руководитель  -->
+            <label for="supervisor-input"></label>
+            <input id="supervisor-input" placeholder="Руководитель" type="text" minlength="2" maxlength="60"
+              class="popup__input popup__input_type_supervisor" />
+            <div class="popup__input-error">
+              <span class="popup__input-error-text supervisor-input-error"></span>
+            </div>
+
+            <button class="popup__save-button">
+              Стать партнёром проекта
+            </button>
+
+            <button class="popup__cancel-button">
+              Отменить
+            </button>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
