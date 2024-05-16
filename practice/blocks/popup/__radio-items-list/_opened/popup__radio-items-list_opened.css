@@ -1,0 +1,8 @@
+.popup__radio-items-list_opened {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}

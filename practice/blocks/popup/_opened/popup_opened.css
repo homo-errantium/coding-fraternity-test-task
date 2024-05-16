@@ -1,5 +1,5 @@
 .popup_opened {
-    display: flex;
+    display: block;
     visibility: visible;
     -webkit-transition: all 0.35s ease-out;
     -moz-transition: all 0.35s ease-out;

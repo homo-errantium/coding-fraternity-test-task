@@ -1,0 +1,42 @@
+.popup__radio-button {
+    /* position: relative; */
+    background-color: transparent;
+    text-align: left;
+}
+
+.popup__radio-button ~ span {
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6a6e72;
+    top: 5px;
+}
+
+.popup__radio-button ~ span::before {
+    display: inline-block;
+    content: '*';
+    color: #d90000;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 3px;
+}
+.popup__radio-button ~ span::after {
+    display: inline-block;
+    position: absolute;
+    right: -440px;
+    top: calc(50% + 5px);
+    content: url(../../../images/arrow-down.svg);
+    color: #d90000;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.popup__radio-button-container {
+    position: relative;
+    margin-bottom: 32px;
+}

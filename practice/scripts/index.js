@@ -1,5 +1,21 @@
 const mainButton = document.querySelector('.main__button');
 const popupAdd = document.querySelector('.popup_type_add');
+const radioButton = document.querySelector('.popup__radio-button');
+const radioItemsList = document.querySelector('.popup__radio-items-list');
+const radioItemsLabelList = Array.from(
+    radioItemsList.querySelectorAll('label')
+);
+
+
+radioButton.addEventListener('click', () => {
+    handleDirectionMenu();
+});
+
+/*--------ф-я открытия/закрытия меню выбора направления------*/
+function handleDirectionMenu() {
+    radioItemsList.classList.toggle('popup__radio-items-list_opened');
+
+}
 
 /*--------ф-я открытия/закрытия попап-а------*/
 function closePopup(popup) {
@@ -50,6 +66,18 @@ function handleFormSubmitAdd(evt) {
     const buttonAdd = evt.submitter;
     disableSubmitButton(buttonAdd, selectors);
 }
+
+function setLabelEventListeners() {
+    radioItemsLabelList.map(label => {
+        label.addEventListener('click', (e) => {
+            radioButton.textContent = e.target.textContent;
+            handleDirectionMenu();
+        })
+    });
+    
+}
+
+setLabelEventListeners(); 
 
 /*--------вызов навешивания валидации-----------*/
 enableValidation(selectors);

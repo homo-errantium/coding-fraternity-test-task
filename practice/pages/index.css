@@ -23,6 +23,13 @@
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__avatar-container/popup__avatar-container.css);
 @import url(../blocks/popup/__avatar-label/popup__avatar-label.css);
-@import url(../blocks/popup/__avatar-input/popup__avatar-input.css);
 @import url(../blocks/popup/__avatar-close-button/popup__avatar-close-button.css);
 @import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_type/popup__input_type-orgAvatar.css);
+@import url(../blocks/popup/__input/_type/popup__input_type-orgDirection.css);
+@import url(../blocks/popup/__input/_type/popup__input_type-radio.css);
+@import url(../blocks/popup/__radio-items-list/popup__radio-items-list.css);
+@import url(../blocks/popup/__radio-button/popup__radio-button.css);
+@import url(../blocks/popup/__radio-items-list/_opened/popup__radio-items-list_opened.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_orgSite.css);
+@import url(../blocks/popup/__radio-item-container/popup__radio-item-container\ .css);

@@ -1,11 +1,13 @@
 .popup__wrapper_in {
     flex-direction: column;
     width: 100%;
+    position: relative;
+    margin-bottom: 32px;
 }
 
 .popup__wrapper_in > label {
     position: absolute;
-    left: 115px;
+    left: 15px;
     margin-top: 5px;
     font-family: 'PT Sans', sans-serif;
     font-size: 12px;

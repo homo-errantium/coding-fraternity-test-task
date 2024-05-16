@@ -11,3 +11,7 @@
     flex-direction: column;
     justify-content: start;
 }
+
+* {
+    border: 1px solid purple;
+}
