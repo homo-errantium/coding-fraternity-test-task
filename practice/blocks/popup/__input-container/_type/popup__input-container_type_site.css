@@ -1,0 +1,12 @@
+.popup__input-container_type_site  > input {
+    padding-bottom: 8px;
+}
+.popup__input-container_type_site > label {
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(100% - 34px);
+    background-image: url(../../../../images/social-icons/site-icon.svg);
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+}

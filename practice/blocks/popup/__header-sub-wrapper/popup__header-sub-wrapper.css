@@ -1,0 +1,6 @@
+.popup__header-sub-wrapper {
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    /* margin-bottom: 32px; */
+}

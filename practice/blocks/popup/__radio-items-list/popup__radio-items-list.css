@@ -2,10 +2,6 @@
     display: none;
 }
 
-.popup__radio-items-list .popup__radio-item {
-    height: 56px;
-}
-
 .popup__radio-items-list label {
     display: flex;
     align-items: center;

@@ -3,6 +3,7 @@
     height: 56px;
     box-sizing: border-box;
     padding: 8px 16px;
+    padding-bottom: 0;
     display: inline-block;
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
@@ -14,13 +15,14 @@
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    /* margin-bottom: 32px; */
     padding-right: 50px;
+    align-items: baseline;
+    /* margin-bottom: 32px; */
 }
 
-.popup__input:last-of-type {
+/* .popup__input:last-of-type {
     margin-bottom: 0;
-}
+} */
 
 .popup__input::placeholder {
     display: block;

@@ -17,19 +17,30 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__set/popup__set.css);
-@import url(../blocks/popup/__wrapper/popup__wrapper.css);
-@import url(../blocks/popup/__wrapper/_out/popup__wrapper_out.css);
-@import url(../blocks/popup/__wrapper/_in/popup__wrapper_in.css);
+@import url(../blocks/popup/__header-wrapper/popup__header-wrapper.css);
 @import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__header-sub-wrapper/popup__header-sub-wrapper.css);
+
 @import url(../blocks/popup/__avatar-container/popup__avatar-container.css);
 @import url(../blocks/popup/__avatar-label/popup__avatar-label.css);
 @import url(../blocks/popup/__avatar-close-button/popup__avatar-close-button.css);
-@import url(../blocks/popup/__input/popup__input.css);
-@import url(../blocks/popup/__input/_type/popup__input_type-orgAvatar.css);
-@import url(../blocks/popup/__input/_type/popup__input_type-orgDirection.css);
-@import url(../blocks/popup/__input/_type/popup__input_type-radio.css);
+
 @import url(../blocks/popup/__radio-items-list/popup__radio-items-list.css);
 @import url(../blocks/popup/__radio-button/popup__radio-button.css);
 @import url(../blocks/popup/__radio-items-list/_opened/popup__radio-items-list_opened.css);
-@import url(../blocks/popup/__input/_type/popup__input_type_orgSite.css);
-@import url(../blocks/popup/__radio-item-container/popup__radio-item-container\ .css);
+
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input-container/popup__input-container.css);
+@import url(../blocks/popup/__input/_type/popup__input_type-radio.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_required.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_site.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_vk.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_ok.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_fb.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_inst.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_yt.css);
+@import url(../blocks/popup/__input-container/_type/popup__input-container_type_supervisor.css);
+
+@import url(../blocks/popup/__buttons-container/popup__buttons-container.css);
+@import url(../blocks/popup/__save-button/popup__save-button.css);
+@import url(../blocks/popup/__cancel-button/popup__cancel-button.css);

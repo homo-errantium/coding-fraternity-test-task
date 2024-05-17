@@ -25,8 +25,9 @@
         <form novalidate enctype="text/plain" class="popup__form" id="popupAddForm">
           <fieldset class="popup__set">
 
-            <!-- аватар -->
-            <div class="popup__wrapper">
+            <div class="popup__header-wrapper">
+
+              <!-- аватар -->
               <div class="popup__avatar-container">
                 <button type="button" class="popup__avatar-close-button"></button>
                 <label class="popup__avatar-label" for="orgAvatar-input">
@@ -35,35 +36,40 @@
                 </label>
               </div>
 
-              <div class="popup_wrapper popup__wrapper_in">
+              <div class="popup__header-sub-wrapper">
                 <!-- название организации -->
-                <input id="orgName-input" required placeholder="" type="text"
-                  class="popup__input popup__input_type-orgName" minlength="2" maxlength="40" />
-                <label for="orgName-input">Название организации</label>
-                <div class="popup__input-error">
-                  <span class="popup__input-error-text orgName-input-error"></span>
+                <div class="popup__input-container popup__input-container_type_required">
+                  <input id="orgName-input" required placeholder="" type="text" class="popup__input" minlength="2"
+                    maxlength="40" />
+                  <label for="orgName-input">Название организации</label>
+                  <div class="popup__input-error">
+                    <span class="popup__input-error-text orgName-input-error"></span>
+                  </div>
                 </div>
 
                 <!-- телефон организации  -->
-                <input id="orgTel-input" required placeholder="" type="tel"
-                  class="popup__input popup__input_type-orgTel" minlength="11" maxlength="12" />
-                <label for="orgTel-input">Телефон</label>
-                <div class="popup__input-error">
-                  <span class="popup__input-error-text orgTel-input-error"></span>
+                <div class="popup__input-container popup__input-container_type_required">
+                  <input id="orgTel-input" required placeholder="" type="tel"
+                    class="popup__input popup__input_type-orgTel" minlength="11" maxlength="12" />
+                  <label for="orgTel-input">Телефон</label>
+                  <div class="popup__input-error">
+                    <span class="popup__input-error-text orgTel-input-error"></span>
+                  </div>
                 </div>
 
                 <!-- почта организации  -->
-                <input id="orgEmail-input" required placeholder="" type="email"
-                  class="popup__input popup__input_type-orgEmail" />
-                <label for="orgEmail-input">E-mail</label>
-                <div class="popup__input-error">
-                  <span class="popup__input-error-text orgEmail-input-error"></span>
+                <div class="popup__input-container popup__input-container_type_required"><input id="orgEmail-input"
+                    required placeholder="" type="email" class="popup__input" />
+                  <label for="orgEmail-input">E-mail</label>
+                  <div class="popup__input-error">
+                    <span class="popup__input-error-text orgEmail-input-error"></span>
+                  </div>
                 </div>
+
               </div>
             </div>
 
             <!-- направление организации  -->
-
             <!-- кнопка меню -->
             <div class="popup__radio-button-container">
               <button class="popup__input popup__radio-button" type='button'></button><span>Направление</span>
@@ -75,10 +81,12 @@
                 <input id='itDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
                 <label for="itDir" class='popup__input'>Информационные технологии</label>
               </div>
+
               <div class="popup__radio-item">
                 <input id='ecoDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
                 <label for="ecoDir" class='popup__input'>Экология</label>
               </div>
+
               <div class="popup__radio-item">
                 <input id='travelDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
                 <label for="travelDir" class='popup__input'>Туризм</label>
@@ -86,11 +94,9 @@
             </div>
 
             <!-- сайт организации  -->
-            <div class="popup__radio-item-container">
-              <input id="orgSite-input" placeholder="Сайт организации" type="text"
-                class="popup__input popup__input_type_orgSite" />
+            <div class="popup__input-container popup__input-container_type_site">
+              <input id="orgSite-input" placeholder="Сайт организации" type="text" class="popup__input" />
               <label for="orgSite-input">
-                <!-- <img src="./images/social-icons/site-icon.svg" alt="иконка сайта"> -->
               </label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgSite-input-error"></span>
@@ -98,9 +104,9 @@
             </div>
 
             <!-- страница организации в вк  -->
-            <div class="popup__radio-item-container"><label for="orgVKPage-input"></label>
-              <input id="orgVKPage-input" placeholder="Страница организации в VK" type="text"
-                class="popup__input popup__input_type-orgVKPage" />
+            <div class="popup__input-container popup__input-container_type_vk">
+              <input id="orgVKPage-input" placeholder="Страница организации в VK" type="text" class="popup__input" />
+              <label for="orgVKPage-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgVKPage-input-error"></span>
               </div>
@@ -108,9 +114,9 @@
 
 
             <!-- страница организации в одноклассниках  -->
-            <div class="popup__radio-item-container"><label for="orgOKPage-input"></label>
-              <input id="orgOKPage-input" placeholder="Страница организации в OK" type="text"
-                class="popup__input popup__input_type-orgOKPage" />
+            <div class="popup__input-container popup__input-container_type_ok">
+              <input id="orgOKPage-input" placeholder="Страница организации в OK" type="text" class="popup__input" />
+              <label for="orgOKPage-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgOKPage-input-error"></span>
               </div>
@@ -118,19 +124,20 @@
 
 
             <!-- страница организации в фейсбук  -->
-            <div class="popup__radio-item-container"><label for="orgFBPage-input"></label>
+            <div class="popup__input-container popup__input-container_type_fb">
               <input id="orgFBPage-input" placeholder="Страница организации в Facebook" type="text"
-                class="popup__input popup__input_type-orgFBPage" />
+                class="popup__input" />
+              <label for="orgFBPage-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgFBPage-input-error"></span>
               </div>
             </div>
 
             <!-- страница организации в инстаграм  -->
-            <div class="popup__radio-item-container">
-              <label for="orgInstPage-input"></label>
+            <div class="popup__input-container popup__input-container_type_inst">
               <input id="orgInstPage-input" placeholder="Страница организации в Instagram" type="text"
-                class="popup__input popup__input_type-orgInstPage" />
+                class="popup__input" />
+              <label for="orgInstPage-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgInstPage-input-error"></span>
               </div>
@@ -138,10 +145,10 @@
 
 
             <!-- страница организации в youtube  -->
-            <div class="popup__radio-item-container">
-              <label for="orgYoutubePage-input"></label>
+            <div class="popup__input-container popup__input-container_type_yt">
               <input id="orgYoutubePage-input" placeholder="Страница организации в Youtube" type="text"
-                class="popup__input popup__input_type-orgYoutubePage" />
+                class="popup__input" />
+              <label for="orgYoutubePage-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text orgYoutubePage-input-error"></span>
               </div>
@@ -149,23 +156,26 @@
 
 
             <!-- Руководитель  -->
-            <div class="popup__radio-item-container"><label for="supervisor-input"></label>
+            <div class="popup__input-container popup__input-container_type_supervisor">
               <input id="supervisor-input" placeholder="Руководитель" type="text" minlength="2" maxlength="60"
-                class="popup__input popup__input_type-supervisor" />
+                class="popup__input" />
+              <label for="supervisor-input"></label>
               <div class="popup__input-error">
                 <span class="popup__input-error-text supervisor-input-error"></span>
               </div>
             </div>
 
 
-            <button class="popup__save-button">
-              Стать партнёром проекта
-            </button>
+            <div class="popup__buttons-container">
+              <button class="popup__save-button">
+                Стать партнёром проекта
+              </button>
 
-            <button class="popup__cancel-button">
-              Отменить
-            </button>
+              <button class="popup__cancel-button">
+                Отменить
+              </button>
 
+            </div>
           </fieldset>
         </form>
       </div>

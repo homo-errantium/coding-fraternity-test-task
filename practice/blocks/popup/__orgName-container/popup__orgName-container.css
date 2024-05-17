@@ -1,0 +1,14 @@
+/* .popup__orgName-container > label {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6a6e72;
+}
+.popup__orgName-container > label::before {
+    content: '*';
+    color: #d90000;
+    margin-right: 3px;
+} */

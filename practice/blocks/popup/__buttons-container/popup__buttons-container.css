@@ -1,0 +1,4 @@
+.popup__buttons-container {
+    display: flex;
+    flex-direction: column;
+}

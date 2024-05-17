@@ -1,0 +1,6 @@
+.popup__input-container_type_supervisor {
+    margin-bottom: 0;
+}
+.popup__input-container_type_supervisor > input {
+    padding-bottom: 8px;
+}

@@ -1,0 +1,13 @@
+.popup__input-container_type_fb > input {
+    padding-bottom: 8px;
+}
+
+.popup__input-container_type_fb > label {
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(100% - 34px);
+    background-image: url(../../../../images/social-icons/fb-icon.svg);
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+}

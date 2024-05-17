@@ -6,3 +6,7 @@
     position: relative;
     margin-left: 31.83px;
 }
+
+.popup__avatar-container input {
+    display: none;
+}
