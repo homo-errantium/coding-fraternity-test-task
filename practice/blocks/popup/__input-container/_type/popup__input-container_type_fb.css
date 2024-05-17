@@ -4,7 +4,7 @@
 
 .popup__input-container_type_fb > label {
     position: absolute;
-    top: calc(50% - 9px);
+    top: 22px;
     left: calc(100% - 34px);
     background-image: url(../../../../images/social-icons/fb-icon.svg);
     width: 18px;

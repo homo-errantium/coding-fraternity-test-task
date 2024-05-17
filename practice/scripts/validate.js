@@ -35,9 +35,7 @@ function setEventListeners(formElement, selectors) {
         formElement.querySelectorAll(selectors.inputSelector)
     ); //массив инпутов одной формы
     const buttonElement = formElement.querySelector(
-        selectors.submitButtonSelector
-    ); //кнопка формы
-    disableSubmitButton(buttonElement, selectors);
+        selectors.submitButtonSelector);
     //навешиваем слушатель на каждый из инпутов в процессе заполнения
     inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {

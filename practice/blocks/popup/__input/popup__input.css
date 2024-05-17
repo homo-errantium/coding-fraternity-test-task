@@ -29,6 +29,6 @@
     font-family: 'PT Sans', sans-serif;
     font-size: 12px;
     line-height: 16px;
-    top: 5px;
+    /* top: 5px; */
     position: absolute;
 }
