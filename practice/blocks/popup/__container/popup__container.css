@@ -10,3 +10,11 @@
     margin-top: 100px;
     margin-bottom: 300px;
 }
+
+@media screen and (max-width: 767px) {
+    .popup__container {
+        padding: 53px 5vw;
+        /* position: fixed; */
+        overflow-x: hidden;
+    }
+}

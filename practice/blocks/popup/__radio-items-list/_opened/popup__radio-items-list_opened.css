@@ -3,6 +3,17 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 32px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     border-radius: 5px;
+    margin-top: -25px;
+    animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

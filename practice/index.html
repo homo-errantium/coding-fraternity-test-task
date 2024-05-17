@@ -8,16 +8,19 @@
   <link rel="stylesheet" href="./pages/index.css">
   <script defer src="./scripts/validate.js"></script>
   <script defer src="./scripts/index.js"></script>
+  <script defer src="./scripts/api.js"></script>
   <title>practice test task</title>
 </head>
 
 <body class='root'>
   <div class="page">
     <header></header>
-    <main><button class='main__button' type='button'>Открыть попап</button></main>
+    <main><button id='popupAddButton' class='main__button' type='button'>Задание №1 (попап)</button>
+      <button id='postsGetButton' class='main__button' type='button'>Задание №2 (таблица)</button>
+    </main>
     <footer></footer>
 
-    <!-- /*попап */ -->
+    <!-- /*попап формы*/ -->
     <div class="popup popup_type_add">
       <div class="popup__container">
         <h2 class="popup__title">Стать партнёром проекта</h2>
@@ -48,7 +51,7 @@
 
                 <!-- телефон организации  -->
                 <div class="popup__input-container popup__input-container_type_required">
-                  <input id="orgTel-input" required placeholder=' +7 (777) 777 77 77'
+                  <input id="orgTel-input" required placeholder=''
                     pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
                     type="tel" class="popup__input popup__input_type-orgTel" />
                   <label for="orgTel-input">Телефон</label>
@@ -59,8 +62,7 @@
 
                 <!-- почта организации  -->
                 <div class="popup__input-container popup__input-container_type_required">
-                  <input id="orgEmail-input" required placeholder="my-email@mail.ru" type="email"
-                    class="popup__input" />
+                  <input id="orgEmail-input" required placeholder="" type="email" class="popup__input" />
                   <label for="orgEmail-input">E-mail</label>
                   <div class="popup__input-error">
                     <span class="popup__input-error-text orgEmail-input-error"></span>
@@ -72,26 +74,21 @@
 
             <!-- направление организации  -->
             <!-- кнопка меню -->
-            <div class="popup__radio-button-container">
-              <button class="popup__input popup__radio-button" type='button'></button><span>Направление</span>
+            <div class="popup__input-container popup__input-container_type_required">
+              <input id='radioButton-input' class="popup__input popup__radio-button" type='button' required />
+              <label for="radioButton-input">Направление</label>
+              <div class="popup__input-error">
+                <span class="popup__input-error-text radioButton-input-error"></span>
+              </div>
             </div>
 
             <!-- пункты меню -->
             <div class="popup__radio-items-list">
-              <div class="popup__radio-item">
-                <input id='itDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
-                <label for="itDir" class='popup__input'>Информационные технологии</label>
-              </div>
+              <button id='itDir' type="button" class='popup__input popup__input_type-radio'>Информационные
+                технологии</button>
+              <button id='ecoDir' type="radio" class='popup__input popup__input_type-radio'>Туризм</button>
+              <button id='travelDir' type="radio" class='popup__input popup__input_type-radio'>Экология</button>
 
-              <div class="popup__radio-item">
-                <input id='ecoDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
-                <label for="ecoDir" class='popup__input'>Экология</label>
-              </div>
-
-              <div class="popup__radio-item">
-                <input id='travelDir' type="radio" class='popup__input popup__input_type-radio' name='direction'>
-                <label for="travelDir" class='popup__input'>Туризм</label>
-              </div>
             </div>
 
             <!-- сайт организации  -->
@@ -181,6 +178,14 @@
         </form>
       </div>
     </div>
+
+    <!-- попап оповещение  -->
+    <div class="popup popup_type_info">
+      <div class="popup__container">
+        <h2 class="popup__title">Спасибо! Мы свяжемся с вами в ближайшее время</h2>
+      </div>
+    </div>
+
   </div>
 
 </body>

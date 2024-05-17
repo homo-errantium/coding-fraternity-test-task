@@ -9,9 +9,11 @@ function showInputError(formElement, inputElement, errorMessage, selectors) {
 /*--------скрытие ошибок валидации-----------*/
 function hideInputError(formElement, inputElement, selectors) {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`); //находим нужный спан
-    inputElement.classList.remove(selectors.inputErrorClass); // удаляем класс ошибки (красную подсветку)
-    errorElement.classList.remove(selectors.errorTextClass); //удаляем видимость спана ошибки
-    errorElement.textContent = ""; //очищаем спан
+    if (errorElement  &&  inputElement ) {
+        inputElement.classList.remove(selectors.inputErrorClass); // удаляем класс ошибки (красную подсветку)
+        errorElement.classList.remove(selectors.errorTextClass); //удаляем видимость спана ошибки
+        errorElement.textContent = ''; //очищаем спан
+    }
 }
 
 /*--------проверка условий валидации-----------*/

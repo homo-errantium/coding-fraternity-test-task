@@ -3,11 +3,14 @@ const mainButton = document.querySelector('.main__button');
 const resetButton = document.querySelector('.popup__cancel-button');
 const saveButton= document.querySelector('.popup__save-button')
 const popupAdd = document.querySelector('.popup_type_add');
+const popupInfo = document.querySelector('.popup_type_info');
 const radioButton = document.querySelector('.popup__radio-button');
 const radioItemsList = document.querySelector('.popup__radio-items-list');
-const radioItemsLabelList = Array.from(
-    radioItemsList.querySelectorAll('label')
+const radioButtonsList = Array.from(
+    radioItemsList.querySelectorAll('button')
 );
+
+const postsGetButton = document.getElementById('postsGetButton');
 
 const selectors = {
     containerSelector: '.popup__container',
@@ -21,7 +24,7 @@ const selectors = {
     popupCloseClass: '.popup__close',
 };
 
-
+/*--------установка слушателя на радио-кнопку------*/
 radioButton.addEventListener('click', () => {
     handleDirectionMenu();
 });
@@ -72,38 +75,38 @@ function handleEscapeButton(event) {
   }
 }
 
-/*--------добавление новых данных-----------*/
-function handleFormSubmitAdd(evt) {
-    evt.preventDefault();
-    addCard({ name: nameInputAdd.value, link: linkInputAdd.value });
+saveButton.addEventListener('click', () => {
+    disableSubmitButton();
     closePopup(popupAdd);
-    evt.target.reset();
-    const buttonAdd = evt.submitter;
-    disableSubmitButton(buttonAdd, selectors);
-}
-
+    
+    setTimeout(function () {
+        popupInfo.classList.add('popup_opened');
+    },1000)
+    setTimeout(function () {
+        const popupInfo = document.querySelector('.popup_type_info');
+        popupInfo.classList.remove('popup_opened');
+    },3000)
+});
 
 function disableSubmitButton() {
     saveButton.classList.add('popup__save-button_inactive');
     // buttonElement.setAttribute('disabled', 'disabled');
     saveButton.setAttribute('disabled', 'disabled');
-    console.log(saveButton);
 }
 
-
-function setLabelEventListeners() {
-    radioItemsLabelList.map(label => {
-        label.addEventListener('click', (e) => {
-            radioButton.textContent = e.target.textContent;
+/*навешивание слушателей на радио-кнопки*/
+function setLabelEventListeners() {    
+    radioButtonsList.map(button => {
+        button.addEventListener('click', (e) => {
+            radioButton.value = e.target.textContent;
             handleDirectionMenu();
         })
     });
-    
-    
 }
 
 setLabelEventListeners(); 
 
+/*сброс значений*/
 function resetAllValue() {
     evt.preventDefault();
     const inputList = Array.from(
@@ -115,9 +118,7 @@ function resetAllValue() {
     radioButton.textContent = '';
 }
 
-// saveButton.addEventListener('click', () => {
-//     disableSubmitButton();
-// })
+
 
 resetButton.addEventListener('click', () => {
     resetAllValue();
@@ -139,7 +140,28 @@ function enableValidation(selectors) {
             setEventListeners(fieldSet, selectors);
         });
     });
+    disableSubmitButton();
 }
 
 /*--------вызов навешивания валидации-----------*/
 enableValidation(selectors);
+
+
+/*--------Api-----------*/
+
+postsGetButton.addEventListener('click', () => {
+const json = getPosts();
+const data = JSON.parse(json);
+const table = document.createElement('table');
+
+// Заполнение таблицы данными
+data.forEach((item) => {
+    const row = table.insertRow();
+    Object.values(item).forEach((text) => {
+        const cell = row.insertCell();
+        cell.textContent = text;
+    });
+});
+
+document.body.appendChild(table);
+} );

@@ -17,12 +17,7 @@
     position: relative;
     padding-right: 50px;
     align-items: baseline;
-    /* margin-bottom: 32px; */
 }
-
-/* .popup__input:last-of-type {
-    margin-bottom: 0;
-} */
 
 .popup__input::placeholder {
     display: block;
@@ -31,4 +26,10 @@
     line-height: 16px;
     /* top: 5px; */
     position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__input::placeholder {
+        max-width: 70%;
+    }
 }
