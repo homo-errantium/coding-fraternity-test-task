@@ -1,24 +1,27 @@
-
+// -------------создание заголовков таблицы---------------
 const createTableHead = (data, table) => {
     const thead = document.createElement('thead');
     const headerTr = document.createElement('tr');
   if (data) {
+
     Object.keys(data[0]).forEach((key, columnNo) => {
-      const arrowImage = createImage();
       const th = document.createElement('th');
       th.textContent = key;
+      th.setAttribute('id', `${key}`)
       th.classList.add('table__header');
+
+      // создание картинки для заголовка колонки
+      const arrowImage = createImage();
       th.appendChild(arrowImage);
 
-      th.addEventListener('click', (e) => {
+      // навешивание слушателей на заголовки колонок 
+      th.addEventListener('click', () => {
         th.classList.toggle('table__header_up');
         let dirUp = th.classList.contains('table__header_up');
         sortTable(table, columnNo, dirUp);
-        console.log(th.children);
-        
+        resetSortTable(table, th.id);
       });
 
-        
         headerTr.appendChild(th);
         thead.appendChild(headerTr);
         table.appendChild(thead);
@@ -27,12 +30,22 @@ const createTableHead = (data, table) => {
     
 };
 
+// -------------сброс заголовков таблицы---------------
+const resetSortTable = (table, thId) => {
+  const thArr = table.querySelectorAll('th');
+  thArr.forEach(item => { if (item.id !== thId && item.classList.contains('table__header_up'))
+      item.classList.remove('table__header_up');} );
+};
+
+// -------------создание изображения стрелки для заголовков таблицы---------------
 const createImage = () => {
-    const image = document.createElement('div');
+  const image = document.createElement('div');
+    image.setAttribute('alt', 'стрелка заголовка колонки')
     image.classList.add('table__image');
     return image;
 };
 
+// -------------создание тела таблицы---------------
 const createTableBody = (data, table) => {
   const tbody = document.createElement('tbody')
   if (data) {
@@ -50,6 +63,7 @@ const createTableBody = (data, table) => {
   }
 };
 
+// -------------создание таблицы (заголовки + тело)---------------
 const createTable = (data) => {
   const table = document.createElement('table');
   table.setAttribute('id', 'table');
@@ -59,6 +73,7 @@ const createTable = (data) => {
   return table;
 };
 
+// -------------создание поисковой строки---------------
 const createInputSearch = () => {
   const inputSearch = document.createElement('input');
   inputSearch.setAttribute('type', 'search');
@@ -67,10 +82,10 @@ const createInputSearch = () => {
   const label = document.createElement('label')
   label.setAttribute('for', 'input-search');
   label.appendChild(inputSearch)
-
   return label;
 }
 
+// -------------сортировка по колонкам---------------=
 function sortTable(table, sortColumn, dirUp) {
   const tableBody = table.querySelector('tbody');
   const tableData = table2data(tableBody);
@@ -107,11 +122,10 @@ function sortTable(table, sortColumn, dirUp) {
           });
       }
   }
-   
-  
     data2table(tableBody, tableData);
 }
 
+// -------------конвертация  данных из таблицы в массивы ---------------
 function table2data(tableBody) {
     const tableData = []; 
     tableBody.querySelectorAll('tr').forEach((row) => {
@@ -125,6 +139,7 @@ function table2data(tableBody) {
     return tableData;
 }
 
+// -------------конвертация  данных из массива в таблицу ---------------
 function data2table(tableBody, tableData) {
     tableBody.querySelectorAll('tr')
         .forEach((row, i) => {

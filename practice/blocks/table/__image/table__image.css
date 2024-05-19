@@ -3,6 +3,7 @@
     width: 20px;
     height: 20px;
     background-image: url(../../../images/arrow-down.svg);
+    transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -14,7 +15,7 @@
     width: 20px;
     height: 20px;
     background-image: url(../../../images/arrow-down.svg);
-    transform: rotate(180deg);
+    transform: rotate(0);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
