@@ -118,8 +118,7 @@ function resetAllValue() {
     radioButton.textContent = '';
 }
 
-
-
+/*навешивание слушателей на кнопку сброса*/
 resetButton.addEventListener('click', () => {
     resetAllValue();
 });
@@ -147,21 +146,27 @@ function enableValidation(selectors) {
 enableValidation(selectors);
 
 
-/*--------Api-----------*/
+/*--------таблица-----------*/
+const filterData = (data) => {
+    
+}
+
+const setData = async () => {
+    let data = await getPosts(baseUrl);
+
+    const tableId = document.getElementById('table');
+    const mainTable = document.getElementById('main-table');
+
+
+    if (!mainTable.contains(tableId)) {
+        const table = createTable(data);
+        mainTable.appendChild(table);
+    } else {
+        mainTable.removeChild(tableId);
+        setData();
+    }
+};
 
 postsGetButton.addEventListener('click', () => {
-const json = getPosts();
-const data = JSON.parse(json);
-const table = document.createElement('table');
-
-// Заполнение таблицы данными
-data.forEach((item) => {
-    const row = table.insertRow();
-    Object.values(item).forEach((text) => {
-        const cell = row.insertCell();
-        cell.textContent = text;
-    });
+  setData();
 });
-
-document.body.appendChild(table);
-} );

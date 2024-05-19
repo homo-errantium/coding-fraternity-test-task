@@ -8,12 +8,8 @@ const baseUrl = 'https://jsonplaceholder.typicode.com/posts';
         }
     }
 
-const getPosts = async () => {
-  try {
-    const res = await fetch(baseUrl).then((response) => checkResponse(response));
-    console.log(res);
-      return res;
-  } catch (err) {
-      console.error(err);
-  }
-};
+const getPosts = (url) => {
+  return new Promise((resolve, reject) => {
+    fetch(url).then(res => res.json()).then(data => resolve(data)).catch(err=> reject(err))
+  })
+}
