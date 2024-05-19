@@ -51,3 +51,6 @@
 
 /* таблица */
 @import url(../blocks/table/table.css);
+@import url(../blocks/main/__input/main__input.css);
+@import url(../blocks/table/__header/table__header.css);
+@import url(../blocks/table/__image/table__image.css);

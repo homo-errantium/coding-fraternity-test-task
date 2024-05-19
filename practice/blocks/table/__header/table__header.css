@@ -1,0 +1,6 @@
+.table__header {
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    min-width: 85px;
+    position: relative;
+}

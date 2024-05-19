@@ -1,0 +1,10 @@
+.main__input {
+    margin: 0 0 20px 0;
+    height: 50px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid grey;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    padding: 5px;
+}

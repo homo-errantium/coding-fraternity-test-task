@@ -1,0 +1,22 @@
+.table__image {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../../images/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20%;
+}
+
+.table__header_up > .table__image {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../../images/arrow-down.svg);
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20%;
+}

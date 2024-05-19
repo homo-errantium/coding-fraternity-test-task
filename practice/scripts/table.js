@@ -1,24 +1,36 @@
 
-
-
 const createTableHead = (data, table) => {
     const thead = document.createElement('thead');
     const headerTr = document.createElement('tr');
   if (data) {
     Object.keys(data[0]).forEach((key, columnNo) => {
+      const arrowImage = createImage();
       const th = document.createElement('th');
       th.textContent = key;
-      th.addEventListener('click', () => {
-        th.classList.toggle('up');
-        let dirUp = th.classList.contains('up');
-        sortTable(table, columnNo, dirUp );
-    });
+      th.classList.add('table__header');
+      th.appendChild(arrowImage);
+
+      th.addEventListener('click', (e) => {
+        th.classList.toggle('table__header_up');
+        let dirUp = th.classList.contains('table__header_up');
+        sortTable(table, columnNo, dirUp);
+        console.log(th.children);
+        
+      });
+
+        
         headerTr.appendChild(th);
         thead.appendChild(headerTr);
         table.appendChild(thead);
     })} 
     else {throw new Error('no data')}
     
+};
+
+const createImage = () => {
+    const image = document.createElement('div');
+    image.classList.add('table__image');
+    return image;
 };
 
 const createTableBody = (data, table) => {
@@ -39,21 +51,25 @@ const createTableBody = (data, table) => {
 };
 
 const createTable = (data) => {
-  // const mainTable = document.getElementById('main-table')
-  const inputSearch = document.createElement('input');
-  inputSearch.setAttribute('type', 'search');
-  inputSearch.setAttribute('id', 'inputSearch');
-  document.body.appendChild(inputSearch);
-
   const table = document.createElement('table');
   table.setAttribute('id', 'table');
 
   createTableHead(data, table);
   createTableBody(data, table);
-
   return table;
 };
 
+const createInputSearch = () => {
+  const inputSearch = document.createElement('input');
+  inputSearch.setAttribute('type', 'search');
+  inputSearch.setAttribute('id', 'input-search');
+  inputSearch.classList.add('main__input');
+  const label = document.createElement('label')
+  label.setAttribute('for', 'input-search');
+  label.appendChild(inputSearch)
+
+  return label;
+}
 
 function sortTable(table, sortColumn, dirUp) {
   const tableBody = table.querySelector('tbody');

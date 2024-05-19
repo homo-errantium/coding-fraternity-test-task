@@ -156,12 +156,18 @@ const setData = async () => {
 
     const tableId = document.getElementById('table');
     const mainTable = document.getElementById('main-table');
+    const inputSearchId = document.getElementById('input-search');
 
 
-    if (!mainTable.contains(tableId)) {
+    if (!mainTable.contains(tableId) && !mainTable.contains(inputSearchId)) {
+        const inputSearch = createInputSearch();
+        mainTable.appendChild(inputSearch);
+
         const table = createTable(data);
         mainTable.appendChild(table);
     } else {
+
+        mainTable.removeChild(inputSearchId);
         mainTable.removeChild(tableId);
         setData();
     }
